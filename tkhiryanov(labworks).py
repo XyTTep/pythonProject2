@@ -5,7 +5,7 @@ turtle.shape('turtle')
 
 
 def square(side, number_of_squares):
-    """draw rectangle
+    """draw square
     side = first size of the edge"""
     for a in range(1, number_of_squares + 1):
         for i in range(4):
