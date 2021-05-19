@@ -10,7 +10,7 @@ def num(n):
         t.goto(0, -40)
         t.pendown()
         t.left(45)
-        t.forward(math.sqrt(40**2 + 40**2))
+        t.forward(math.sqrt(40 ** 2 + 40 ** 2))
         t.right(180 - 45)
         t.forward(80)
     if n == 2:
@@ -96,7 +96,10 @@ def num(n):
         t.forward(80)
 
 
-a: List[str] = input().split()
+tex = open('teeee.txt', 'r')
+
+
+a: List[str] = tex.readline().split()
 i: int
 window = t.Screen()
 for i in range(len(a)):
@@ -107,3 +110,4 @@ for i in range(len(a)):
     t.pendown()
     num(a[i])
 window.exitonclick()
+tex.close()
