@@ -1,7 +1,7 @@
 import turtle as t
 import math
 from typing import List
-
+from random import randint
 
 def num(n):
     """ draw numbers that come from arg n """
@@ -111,3 +111,25 @@ for i in range(len(a)):
     num(a[i])
 window.exitonclick()
 tex.close()
+
+
+number_of_turtles = 10
+steps_of_time_number = 1000
+
+
+pool = [t.Turtle(shape='turtle') for i in range(number_of_turtles)]
+for unit in pool:
+    unit.turtlesize(0.5)
+    unit.penup()
+    unit.speed(randint(0, 20))
+    unit.seth(randint(0, 360))
+    unit.goto(randint(-200, 200), randint(-200, 200))
+for i in range(steps_of_time_number):
+    for unit in pool:
+        unit.speed(50)
+        unit.forward(5)
+        unit.right(randint(0,360))
+        # unit.right(randint(0, 360))
+
+
+
